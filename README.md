@@ -39,4 +39,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add your names and emails here
+* Jacob Cloward: jacobcloward@yahoo.com
+* TJ Putnam: teetothejay13@gmail.com
