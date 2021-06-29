@@ -41,3 +41,4 @@ root                    (project root folder)
 ---
 * Jacob Cloward: jacobcloward@yahoo.com
 * TJ Putnam: teetothejay13@gmail.com
+* David Bloomfield: david.s.bloomfield@gmail.com
