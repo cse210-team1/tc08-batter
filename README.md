@@ -40,3 +40,4 @@ root                    (project root folder)
 ## Authors
 ---
 * # TODO: Add your names and emails here
+  # TJ Putnam: teetothejay13@gmail.com
