@@ -21,6 +21,7 @@ class Actor:
         self._text = ""
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
+        self._color = 7
 
     def get_description(self):
         """Gets the artifact's description.
@@ -85,3 +86,9 @@ class Actor:
             position (Point): The given velocity.
         """
         self._velocity = velocity
+        
+    def set_color(self, color):
+        self._color = color
+        
+    def get_color(self):
+        return self._color

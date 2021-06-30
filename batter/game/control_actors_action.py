@@ -1,5 +1,7 @@
 from game import constants
 from game.action import Action
+import sys
+from time import sleep
 
 class ControlActorsAction(Action):
     """A code template for controlling actors. The responsibility of this
@@ -27,5 +29,10 @@ class ControlActorsAction(Action):
             cast (dict): The game actors {key: tag, value: list}.
         """
         direction = self._input_service.get_direction()
-        robot = cast["paddle"][0] # there's only one in the cast
-        robot.set_velocity(direction)        
+        paddle = cast["paddle"][0] # there's only one in the cast
+        paddle.set_velocity(direction)
+        
+        if cast["banner"][0].get_text() == "GAME OVER" or cast["banner"][0].get_text() == "YOU WIN":
+            sleep(5)
+            sys.exit()
+            
