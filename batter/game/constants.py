@@ -1,4 +1,6 @@
-MAX_X = 80
-MAX_Y = 40
-FRAME_LENGTH = 0.1
+import os
 
+MAX_X = 70
+MAX_Y = 20
+FRAME_LENGTH = 0.1
+ARTIFACTS = 30
