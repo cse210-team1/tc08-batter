@@ -33,6 +33,6 @@ class ControlActorsAction(Action):
         paddle.set_velocity(direction)
         
         if cast["banner"][0].get_text() == "GAME OVER" or cast["banner"][0].get_text() == "YOU WIN":
-            sleep(5)
+            sleep(2)
             sys.exit()
             

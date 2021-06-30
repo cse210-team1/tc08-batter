@@ -10,6 +10,7 @@ class Score(Actor):
 		self._points = 0
 		self.set_text(f"Score: {self._points}")
 		self.set_position(Point(3,0))
+		self.set_description("score keeper")
 		
 	def add_points(self, points):
 		self._points += points

@@ -86,12 +86,19 @@ class HandleCollisionsAction(Action):
     def game_over(self, cast, game_state=""):
         for tag in cast:
             for actor in cast[tag]:
-                actor.set_text("")
+                if actor.get_description() == "score keeper":
+                    pass
+                else:
+                    actor.set_text("")
         banner = cast["banner"][0] # There is only one
+        score = cast["score"][0]
         if game_state == "win":
             banner.set_text("YOU WIN!")
         else:
             banner.set_text("GAME OVER")
+        x = round(constants.MAX_X/2)
+        y = round(constants.MAX_Y/2) + 1
+        score.set_position(Point(x,y))
             
 
         
