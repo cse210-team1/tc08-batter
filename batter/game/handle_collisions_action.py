@@ -27,9 +27,11 @@ class HandleCollisionsAction(Action):
                 
     def _check_bricks(self, bricks, ball, score):
         for brick in bricks:
+            if brick.get_color() == constants.HIT_COLOR:
+                bricks.remove(brick)
             if ball.get_position().add(ball.get_velocity()).equals(brick.get_position()):
                 self._bounce(ball,"y")
-                bricks.remove(brick)
+                brick.set_color(constants.HIT_COLOR)
                 score.add_points(10)
     
 
@@ -72,9 +74,12 @@ class HandleCollisionsAction(Action):
         ball_position = ball.get_position().add(ball.get_velocity())
         bat_y = paddle.get_position().get_y()
         bat_x = paddle.get_position().get_x()
+        if paddle.get_color() == constants.PADDLE_HIT:
+            paddle.set_color(7)
         for i in range(len(paddle.get_text())):
             x = bat_x + i
             if ball_position.equals(Point(x,bat_y)):
+                paddle.set_color(constants.PADDLE_HIT)
                 self._bounce(ball,"y")
 
         

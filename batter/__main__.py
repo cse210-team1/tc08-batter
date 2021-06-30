@@ -21,7 +21,7 @@ def main(screen):
     y = int(constants.MAX_Y - 2)
     position = Point(x, y)
     paddle = Actor()
-    paddle.set_text("===========")
+    paddle.set_text("==============")
     paddle.set_position(position)
     cast["paddle"] = [paddle]
 
@@ -42,6 +42,7 @@ def main(screen):
     ball.set_text("@")
     ball.set_position(position)
     ball.set_velocity(velocity)
+    ball.set_color(6)
     cast["ball"] = [ball]
     
     score = Score()
