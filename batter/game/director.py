@@ -1,5 +1,6 @@
 from time import sleep
 from game import constants
+import sys
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -39,3 +40,6 @@ class Director:
         """ 
         for action in self._script[tag]:
             action.execute(self._cast)
+            
+
+        

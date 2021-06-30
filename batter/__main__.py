@@ -39,7 +39,7 @@ def main(screen):
     position = Point(x, y)
     velocity = Point(1, -1)
     ball = Actor()
-    ball.set_text("@")
+    ball.set_text("֍")
     ball.set_position(position)
     ball.set_velocity(velocity)
     ball.set_color(6)
@@ -47,6 +47,10 @@ def main(screen):
     
     score = Score()
     cast["score"] = [score]
+    
+    banner = Actor()
+    banner.set_position(Point(round(constants.MAX_X/2), round(constants.MAX_Y/2)))
+    cast["banner"] = [banner]
     
     # create the script {key: tag, value: list}
     script = {}

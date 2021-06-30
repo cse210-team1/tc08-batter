@@ -1,6 +1,7 @@
 import sys
 from game import constants
 from asciimatics.widgets import Frame
+from time import sleep
 
 class OutputService:
     """Outputs the game state. The responsibility of the class of objects is to draw the game state on the terminal. 
@@ -36,7 +37,10 @@ class OutputService:
         position = actor.get_position()
         x = position.get_x()
         y = position.get_y()
-        self._screen.print_at(text, x, y, color) # WHITE
+        self._screen.print_at(text, x, y, color)
+        
+
+        
 
     def draw_actors(self, actors):
         """Renders the given list of actors on the screen.
@@ -46,6 +50,8 @@ class OutputService:
         """ 
         for actor in actors:
             self.draw_actor(actor, actor.get_color())
+            
+
     
     def flush_buffer(self):
         """Renders the screen.""" 
