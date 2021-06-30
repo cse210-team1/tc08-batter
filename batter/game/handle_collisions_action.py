@@ -20,15 +20,17 @@ class HandleCollisionsAction(Action):
         ball = cast["ball"][0] # there's only one
         paddle = cast["paddle"][0] # there's only one
         bricks = cast["brick"]
-        self._check_bricks(bricks, ball)
+        score = cast["score"][0] # there's only one
+        self._check_bricks(bricks, ball, score)
         self._check_walls(ball)
         self._check_paddle(paddle, ball)
                 
-    def _check_bricks(self, bricks, ball):
+    def _check_bricks(self, bricks, ball, score):
         for brick in bricks:
             if ball.get_position().add(ball.get_velocity()).equals(brick.get_position()):
                 self._bounce(ball,"y")
                 bricks.remove(brick)
+                score.add_points(10)
     
 
     def _bounce(self, ball, direction):
